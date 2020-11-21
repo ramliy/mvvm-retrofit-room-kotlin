@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_20dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@color/colorUltraLightGrey" />
+
+    <TextView
+        android:layout_toEndOf="@+id/iv_image"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Title"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_toEndOf="@+id/iv_image"
+        android:layout_below="@+id/tv_title"
+        android:id="@+id/tv_snippet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_8dp"
+        tools:text="Snippet"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/colorLightGrey"
+        android:layout_toEndOf="@+id/iv_image"
+        android:layout_below="@+id/tv_snippet"
+        android:paddingStart="@dimen/margin_8dp"
+        android:textSize="@dimen/text_size_14sp"
+        tools:text="18/8/18"
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:visibility="gone"
+        android:padding="@dimen/margin_8dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/colorRed"
+        android:layout_below="@+id/tv_date"
+        android:layout_alignParentEnd="true"
+        android:text="@string/remove_favorite"
+        android:id="@+id/tv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

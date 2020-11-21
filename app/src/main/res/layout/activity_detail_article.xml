@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.DetailArticleActivity">
+
+    <ImageView
+        android:background="@color/colorUltraLightGrey"
+        android:id="@+id/iv_article"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tv_snippet"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:id="@+id/iv_back"
+        android:src="@drawable/ic_round_arrow_back_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_bookmark_border_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_below="@+id/tv_snippet"
+        tools:text="Date"
+        android:visibility="gone"
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:id="@+id/tv_lead_par"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_article"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textColor="@color/colorBaseFont" />
+
+    <TextView
+        android:layout_below="@+id/iv_article"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorBlueLink"
+        android:text="@string/read_more"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_toEndOf="@+id/tv_lead_par"
+        android:id="@+id/tv_read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_below="@+id/iv_back"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_size_16sp"
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:textColor="@color/colorBaseFont"
+        tools:text="Title"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:textStyle="italic"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_below="@+id/tv_title"
+        tools:text="Snippet"
+        android:id="@+id/tv_snippet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
